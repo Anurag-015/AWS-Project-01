@@ -1,5 +1,3 @@
----
-
 ```markdown
 # 🎮 Personalized Game Recommendation System on AWS
 
