@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game GG</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Slideshow CSS */
+        .slideshow-container {
+            position: relative;
+            height: 50%;
+            max-width: 80%;
+            /* Reduced max-width to 80% to make it narrower */
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .slideshow-image {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 45%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Narrowing the website overall */
+        .container {
+            max-width: 70%;
+            /* Narrower container for all sections */
+            margin: 0 auto;
+            /* Centering the container */
+        }
+
+        .footer {
+            margin-top: 10%;
+            background-color: #1f316d;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            /* Allows the footer to be responsive */
+            margin-bottom: 20px;
+            /* Space above the copyright */
+        }
+
+        .footer-section {
+            max-width: 300px;
+            /* Limit the width of each section */
+        }
+
+        .footer-section h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .bg-gray-800 py-4 shadow-md {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100">
+
+
+    <header class="bg-gray-800 py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+
+            <div class="flex items-center space-x-3">
+                <img src="logo.png" alt="Logo" class="h-8 w-8">
+                <div class="text-xl font-bold">Game Lens</div>
+            </div>
+
+            <div class="ml-auto flex items-center">
+                <button id="login-btn"
+                    class="bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition duration-300 mr-2">
+                    Login
+                </button>
+                <button id="signup-btn"
+                    class="bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-300">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Second Taskbar -->
+    <nav class="bg-gray-700 py-3 shadow-md">
+        <div class="container mx-auto flex justify-center space-x-8">
+            <a href="#" class="hover:text-indigo-500" onclick="scrollToSection('home')">Home</a>
+            <a href="#" class="hover:text-indigo-500" onclick="scrollToSection('recommendations')">Recommendations</a>
+            <a href="#" class="hover:text-indigo-500" onclick="scrollToSection('about-us')">About Us</a>
+            <a href="#" class="hover:text-indigo-500">Support Us</a>
+        </div>
+    </nav>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <div class="slideshow-image active">
+            <img src="https://i.redd.it/3zkukvllfc711.jpg" class="w-full rounded-lg">
+        </div>
+        <div class="slideshow-image">
+            <img src="https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fdetroit-become-human%2Fhome%2FDetroit_PC_Carousel-1920x1080-6e90610a5d314ce0c12860770cc38c1b23213000.jpg"
+                class="w-full rounded-lg">
+        </div>
+        <div class="slideshow-image">
+            <img src="https://images3.alphacoders.com/825/825895.jpg" class="w-full rounded-lg">
+        </div>
+        <div class="slideshow-image">
+            <img src="https://motionbgs.com/media/6470/black-myth-wukong.jpg" class="w-full rounded-lg">
+        </div>
+        <div class="slideshow-image">
+            <img src="https://wallpapers.com/images/featured/elden-ring-6r85th0gnhifsqd0.jpg" class="w-full rounded-lg">
+        </div>
+        <div class="slideshow-image">
+            <img src="https://wallpapers.com/images/featured/elden-ring-6r85th0gnhifsqd0.jpg" class="w-full rounded-lg">
+        </div>
+        <div class="slideshow-image">
+            <img src="https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/campaign/Licensing/EA%20F1%20Game/EA_F124_KEY_STANDARD_DISCRETE_LAYERS_14400x10200_RGB_03042024_50_"
+                class="w-full rounded-lg">
+        </div>
+        <div class="slideshow-image">
+            <img src="https://images.alphacoders.com/116/1168382.jpg" class="w-full rounded-lg">
+        </div>
+        <div class="slideshow-image">
+            <img src="https://wallpapers.com/images/featured/valorant-305kescxw5dpup7y.jpg" class="w-full rounded-lg">
+        </div>
+        <div class="slideshow-image">
+            <img src="https://wallpapercave.com/wp/wp1809647.jpg" class="w-full rounded-lg">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- JS File Import -->
+    <script src="../static/script.js"></script>
+
+    <!-- Game Recommendation System (JS) Section -->
+    <section id="recommendations" class="container mx-auto py-8">
+        <h2 class="text-3xl font-bold mb-6">Game Recommendation System</h2>
+        <div id="game-list" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+        <div id="selected-games-list" class="mt-6"></div>
+        <div id="recommendations-list" class="mt-6"></div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="container mx-auto py-8">
+        <h2 class="text-3xl font-bold mb-4">About Us</h2>
+        <p class="text-lg">
+            Welcome to our Game Recommendation System. We are a team of five passionate developers who built this
+            platform to help gamers discover the best games based on their preferences. Our goal is to provide an
+            interactive, user-friendly platform where users can explore a wide range of games across genres and
+            platforms. Whether you're a fan of action, adventure, strategy, or indie games, our system will help you
+            find new titles to enjoy.
+        </p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Connect with Us</h3>
+                <ul class="social-media-links">
+                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@gamerecommendation.com</p>
+                <p>Phone: +1 (234) 567-890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Game Recommendation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Popup Forms -->
+    <div id="popup-login" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-gray-800 text-gray-100 p-6 rounded-lg shadow-lg w-96">
+            <h3 class="text-xl font-bold mb-4">Login</h3>
+            <input type="text" placeholder="Username" class="bg-gray-700 text-gray-200 rounded-lg p-2 w-full mb-4">
+            <input type="password" placeholder="Password" class="bg-gray-700 text-gray-200 rounded-lg p-2 w-full mb-4">
+            <button
+                class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition duration-300">Login</button>
+            <button onclick="closePopup('popup-login')"
+                class="w-full bg-red-600 text-white py-2 px-4 mt-4 rounded-md hover:bg-red-700 transition duration-300">Close</button>
+        </div>
+    </div>
+
+    <div id="popup-signup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-gray-800 text-gray-100 p-6 rounded-lg shadow-lg w-96">
+            <h3 class="text-xl font-bold mb-4">Sign Up</h3>
+            <input type="text" placeholder="Username" class="bg-gray-700 text-gray-200 rounded-lg p-2 w-full mb-4">
+            <input type="password" placeholder="Password" class="bg-gray-700 text-gray-200 rounded-lg p-2 w-full mb-4">
+            <button
+                class="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-300">Sign
+                Up</button>
+            <button onclick="closePopup('popup-signup')"
+                class="w-full bg-red-600 text-white py-2 px-4 mt-4 rounded-md hover:bg-red-700 transition duration-300">Close</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
