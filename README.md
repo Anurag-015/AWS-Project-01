@@ -1,4 +1,3 @@
-```markdown
 # 🎮 Personalized Game Recommendation System on AWS
 
 A full-stack web application that provides personalized game recommendations based on user interests. The backend is powered by a custom Machine Learning model and Flask APIs, while the frontend is built using HTML, CSS, and JavaScript. The project is deployed on AWS for scalability and accessibility.
@@ -110,6 +109,3 @@ This project is licensed under the MIT License.
 📧 [mr.anuraggupta2003@gmail.com](mailto:mr.anuraggupta2003@gmail.com)
 🌐 [GitHub](https://github.com/Anurag-015)
 
-```
-
-```
